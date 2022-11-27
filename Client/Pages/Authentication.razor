@@ -1,7 +1,24 @@
 ﻿@page "/authentication/{action}"
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
-<RemoteAuthenticatorView Action="@Action" />
+<RemoteAuthenticatorView Action="@Action">
+    <LogInFailed>
+        <p>Login error: @_errorMessage;</p>
+    </LogInFailed>
+</RemoteAuthenticatorView>
 
 @code{
     [Parameter] public string? Action { get; set; }
+
+    [Inject] NavigationManager _navigationManager { get; set; } = null!;
+
+    string _errorMessage = string.Empty;
+
+    protected override void OnParametersSet()
+    {
+        base.OnParametersSet();
+
+        var currentUrl = new Uri(_navigationManager.Uri);
+        var queryString = currentUrl.Query;
+
+    }
 }
