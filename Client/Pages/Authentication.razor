@@ -2,7 +2,7 @@
 @using Microsoft.AspNetCore.Components.WebAssembly.Authentication
 <RemoteAuthenticatorView Action="@Action">
     <LogInFailed>
-        <p>Login error: @_errorMessage;</p>
+        <p>Login error: @_errorMessage</p>
     </LogInFailed>
 </RemoteAuthenticatorView>
 
@@ -17,8 +17,8 @@
     {
         base.OnParametersSet();
 
-        var currentUrl = new Uri(_navigationManager.Uri);
-        var queryString = currentUrl.Query;
+        //var currentUrl = new Uri(_navigationManager.Uri);
+        //var queryString = currentUrl.Query;
 
     }
 }
