@@ -169,7 +169,7 @@
                 opacity: 1
             }
 
-        img[data-tenant-branding-background=true] {
+        img[data-tenant-branding-background=true], #customBackground {
             width: 100%;
             height: 100%;
             object-fit: cover;
@@ -1144,17 +1144,22 @@
 
 </head>
 <body>
-    <div id="background_branding_container" data-tenant-branding-background-color="true">
-        <img data-tenant-branding-background="true" src="https://calm-plant-011ca6803.2.azurestaticapps.net/template/copenhagen.jpg" alt="Copenhagen" />
+    <div>
+        <img id="customBackground" src="https://calm-plant-011ca6803.2.azurestaticapps.net/template/copenhagen.jpg" alt="Copenhagen" />
     </div>
+    <!--
+    <div id="background_branding_container" data-tenant-branding-background-color="true">
+        <img data-tenant-branding-background="true" src="" alt="Copenhagen" />
+    </div>
+    -->
     <div class="container  unified_container " role="presentation">
         <div class="row">
             <div class="col-lg-6">
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <h3>
+                        <h2>
                             Welcome to our login page!
-                        </h3>
+                        </h2>
                         <p>
                             Sign in with your social account.
                         </p>
@@ -1162,7 +1167,8 @@
                 </div>
                 <div class="panel panel-default">
                     <div class="panel-body">
-                        <img class="companyLogo" data-tenant-branding-logo="true" src="https://calm-plant-011ca6803.2.azurestaticapps.net/template/copenhagen_logo.png" style="height:100px" alt="Copenhagen Logo">
+                        <img class="companyLogo" src="https://calm-plant-011ca6803.2.azurestaticapps.net/template/copenhagen_logo.png" style="height:100px" alt="Copenhagen Logo">
+                        <!--<img class="companyLogo" data-tenant-branding-logo="true" src="https://calm-plant-011ca6803.2.azurestaticapps.net/template/copenhagen_logo.png" style="height:100px" alt="Copenhagen Logo">-->
                         <div id="api" role="main">
                         </div>
                     </div>
